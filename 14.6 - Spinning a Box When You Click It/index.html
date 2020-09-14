@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Spin Box on Click</title>
+        <style>
+            div {
+                width:  10rem;
+                height:  10rem;
+                background:  #ff0000;
+                transition:  transform 3s linear;
+            }
+            /* Rotates 230 degrees clockwise when clicked.  */
+            div.clicked {
+                transform:  rotate(230deg);
+            }
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div></div>
+        <script>
+            /* Creates a class called "clicked".  */
+            $(function() {
+                $("div").click(function() {
+                    $(this).toggleClass('clicked');
+                });
+            });
+        </script>
+    </body>
+</html>

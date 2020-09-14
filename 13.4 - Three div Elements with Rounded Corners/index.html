@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Three DIVs with Rounded Corners</title>
+        <style>
+            div {
+                /* Use border-radius to create round corner.  */
+                border-radius:  1rem;
+                width:  10rem;
+                height:  15rem;
+                float:  left;
+                margin:  1rem;
+                box-sizing:  border-box;
+            }
+            .one {
+                background-color:  aqua;
+            }
+            .two {
+                border:  solid 0.25rem aqua;
+            }
+            /* Display the center top background portion of the image.  
+            Make the image cover the entire div.  
+            Background doesn't repeat.  */
+            .three {
+                background:  url("tree.bmp") center top / cover no-repeat;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </body>
+</html>

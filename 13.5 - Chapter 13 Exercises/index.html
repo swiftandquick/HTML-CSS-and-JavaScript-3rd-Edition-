@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chapter 13 Exercises</title>
+        <style>
+            #groove {
+                border-style:  groove;
+            }
+            #top {
+                border-top:  2px dotted red;
+                border-right:  10px double blue;
+                border-bottom:  none;
+                border-left:  10px double blue;
+            }
+            #bottom {
+                border:  10px double blue;
+                border-top:  2px dotted red;
+                border-bottom:  none;
+            }
+            #bgimg {
+                margin:  0 auto;
+                width:  300px;
+                height:  300px;
+                background:  url(1.bmp) center top / 50% no-repeat, 
+                            url(2.bmp) center bottom / 50% no-repeat;
+            }
+            /* By setting background-clip to content box, I display only background.  */
+            #bgcb {
+                background:  #bbbbbb;
+                background-clip:  content-box;
+            }
+            /* Highlight even elements on the list.  */
+            li:nth-child(even) {
+                background:  #bbbbbb;
+            }
+            /*  Top-left corner is 10px, top-right and bottom-left corners are 5px, 
+            and bottom-right corner is 15px.  */
+            #br {
+                border:  1px solid black;
+                border-radius:  10px 5px 15px;
+            }
+            /* Sets the source image as the border.  */
+            #bis {
+                border:  10px solid transparent;
+                padding:  15px;
+                border-image-source: url(border.bmp);
+                border-image-slice:  30;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="groove">
+            <p>Hello world.  </p>
+        </div>
+        <div style="padding:  5px;">
+            <p id="top">Element 1</p>
+            <p id="bottom">Element 2</p>
+        </div>
+        <div id="bgimg"></div>
+        <div id="bgcb">
+            <p>A random paragraph.  </p>
+        </div>
+        <p>List</p>
+        <ul>
+            <li>Odd</li>
+            <li>Even</li>
+            <li>Odd</li>
+            <li>Even</li>
+            <li>Odd</li>
+            <li>Even</li>
+        </ul>
+        <div id="br">
+            <p>Wasabi Pea</p>
+        </div>
+        <div id="bis">
+            <p>Cute Puppies</p>
+        </div>
+    </body>
+</html>

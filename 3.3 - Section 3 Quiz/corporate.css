@@ -1,0 +1,22 @@
+.main {
+    color:  purple;
+}
+
+header p {
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size:  30pt;
+    color:  blue;
+}
+
+#black {
+    font-family:  'Times New Roman', Times, serif;
+    font-size:  10pt;
+}
+
+/* rem is preferred since it's used for responsive design.  */
+.blocks {
+    font-size:  3rem;
+    display:  inline-block;
+    border-right:  dashed red 2px;
+    border-radius:  1em 1.5em;
+}

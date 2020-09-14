@@ -1,0 +1,19 @@
+h1 {
+    color:  red;
+}
+
+p {
+    color:  blue;
+}
+
+a:link {
+    color:  orange;
+}
+
+a:hover {
+    color:  green;
+}
+
+a:visited {
+    color:  indigo;
+}

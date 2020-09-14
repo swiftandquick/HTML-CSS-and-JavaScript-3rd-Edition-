@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Displaying Time an Dates</title>
+    </head>
+    <body>
+        <h1>Current Date and Time</h1>
+        <!-- Since no element is invoking a specific function, such as onclick, 
+            the script element is being read after h1,  -->
+        <script>
+            // Declares the object now with the instance of Date.  
+            let now = new Date();
+            // Object now calls methods.  
+            let localtime = now.toString();
+            let utctime = now.toGMTString();
+            // document.write prints out what's inside.   
+            document.write("<p><strong>Local time:</strong> " + localtime + "</p>");
+            document.write("<p><strong>UTC time:</strong> " +  utctime + "</p>");
+            let hours = now.getHours();
+            let mins = now.getMinutes();
+            let secs = now.getSeconds();
+            let ms = now.getMilliseconds();
+            document.write("<h2>" + hours + ":" + mins + ":" + secs + ":" + ms + "</h2>");
+            document.write("<p>Display milliseconds twice:  " + ms + ", " + ms + "</p>");
+        </script>
+        <p>The end.  </p>
+    </body>
+</html>

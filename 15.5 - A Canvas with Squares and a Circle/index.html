@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>A Canvas with Shapes</title>
+    <style>
+       canvas {
+            border:  solid thin black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="350" height="450"></canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        /* Pass the String 2d to getContext() method or <canvas> element with ID of myCanvas will not display anything.  */
+        var context = canvas.getContext('2d');
+        /* Blue color filling.  */
+        context.fillStyle = "rgb(13, 118, 208)";
+        /* (30, 30) is the starting coordinate, 150 and 150 are width and height respectively.  */
+        context.fillRect(30, 30, 150, 150);
+        /* strokeStyle draws the outline according to coordinates and size input rather than fill.  */
+        context.strokeStyle = 'blue';
+        context.strokeRect(35, 35, 150, 150);
+
+        /* <canvas> elements are measured in radians and not degrees, startAngle and endAngle need to have radian value.  */
+        var startPoint = (Math.PI / 180) * 0; // Radian = 0, which is 0 degree.  
+        var endPoint = (Math.PI / 180) * 360; // Radian = 6.28319, which is 360 degrees.  
+        /* beginPath sets a starting point before calling arc() method.  */
+        context.beginPath();
+        /* Starting point is (200, 200), diameter is 100.  Drawing direction is counterclockwise.  */
+        context.arc(200, 200, 100, startPoint, endPoint, true);
+        /* Filling color has 50% transparency (0.5) and the color is light red.  */
+        context.fillStyle = "rgba(155, 0, 0, 0.5)";
+        /* Call fill() to make filling color visible.  */
+        context.fill();
+        /* Outline color is red.  */
+        context.strokeStyle = "rgb(255, 0, 0)";
+        /* Call stroke() to make outline color visible.  */
+        context.stroke();
+    </script>
+</body>
+</html>

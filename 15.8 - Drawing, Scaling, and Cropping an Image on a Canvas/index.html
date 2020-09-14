@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>McKinley on Canvas</title>
+        <style>
+            #myCanvas {
+                width:  800px;
+                height:  600px;
+                margin:  0 auto;
+                display:  block;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas width="800" height="600" id="myCanvas"></canvas>
+        <script>
+            var canvas = document.getElementById('myCanvas');
+            var context = canvas.getContext('2d');
+            var img = new Image();
+            img.src = "images/oak.jpg";
+            img.onload = function() {
+                /* Starts at (10, 10) with width 780 and height 680.  */
+                context.drawImage(img, 10, 10, 780, 680);
+                /* The portion I want to copy has the starting coordinate of (844, 344), 
+                width is 532, height is 594.  The portion of of the image will be copied 
+                at the coordinate (0, 300), with width and height of 200.  */
+                context.drawImage(img, 844, 344, 532, 594, 0, 300, 200, 200);
+            }
+        </script>
+    </body>
+</html>

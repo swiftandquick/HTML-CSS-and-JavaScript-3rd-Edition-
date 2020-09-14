@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chapter 12 Exercises</title>
+        <style>
+            /* I am targeting an audience with a standard browser size of 800 * 600 pixels, 
+            it's most reasonable when the max-width is 780 pixels.  Apparently, I cannot shrink 
+            the browser window less than 780 pixels wide.  */
+            body {
+                max-width:  780px;
+            }
+            /* Define a container as a tabe.  */
+            #table {
+                display:  table;
+                margin:  5px;
+            }
+            /* Treats each <p> element inside <table> as inline.  */
+            .table_cell {
+                display:  table-cell;
+                padding:  5px;
+            }
+            #grid {
+                display:  inline-grid;
+                /* 3 columns, each column's width is automatically adjusted.  */
+                grid-template-columns: auto auto auto;
+                padding:  5px;
+            }
+            .grid-item {
+                text-align:  center;
+                padding:  10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="table">
+            <p class="table_cell">Object 1</p>
+            <p class="table_cell">Object 2</p>
+            <p class="table_cell">Object 3</p>
+            <p class="table_cell">Object 4</p>
+            <p class="table_cell">Object 5</p>
+            <p class="table_cell">Object 6</p>
+            <p class="table_cell">Object 7</p>
+            <p class="table_cell">Object 8</p>
+        </div>
+        <div id="grid">
+            <p class="grid_item">Object 1</p>
+            <p class="grid_item">Object 2</p>
+            <p class="grid_item">Object 3</p>
+            <p class="grid_item">Object 4</p>
+            <p class="grid_item">Object 5</p>
+            <p class="grid_item">Object 6</p>
+            <p class="grid_item">Object 7</p>
+            <p class="grid_item">Object 8</p>
+            <p class="grid_item">Object 9</p>
+        </div>
+    </body>
+</html>

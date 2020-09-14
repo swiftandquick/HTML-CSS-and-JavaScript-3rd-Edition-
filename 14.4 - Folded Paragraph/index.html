@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Folded Paragraph</title>
+        <style>
+            div {
+                width:  50%;
+                height:  3rem;
+                background:  linear-gradient(#4138f5 0%, #59c4e4 100%);
+                padding:  1rem;
+                color:  white;
+                margin:  0 auto;
+                text-align:  center;
+            }
+            /* Tilts around 15 degrees.  */
+            .two {
+                background:  linear-gradient(#59c4e4 0%, #4138f5 100%);
+                transform-origin:  top right;
+                transform:  skew(15deg);
+            }
+            /* Tilts around 15 degrees from the other direction.  */
+            .three {
+                transform-origin:  bottom right;
+                transform:  skew(345deg);
+            }
+            /* This is not used.  */
+            .four {
+                background:  linear-gradient(#59c4e4 0%, #4138f5 100%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="one">
+            <p>This is my </p>
+        </div>
+        <div class="two">
+            <p>Fun with Skew </p>
+        </div>
+        <div class="three">
+            <p>Playground </p>
+        </div>
+        <div class="two">
+            <p>Cool, eh?  </p>
+        </div>
+    </body>
+</html>

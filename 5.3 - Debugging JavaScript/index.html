@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sample Page</title>
+        <!-- Import jQuery.  -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+        <script>
+            // var count is supposed to be outside of the loop so every click increments the value by 1.  
+            var count = 0;
+            function incCount() {
+                count += 1;
+                return count;
+            }
+
+            /* Using jQuery.  Every time I click on the button, I retrieves the value from inside the 
+            * <p> tag with "counter" ID, I increment the paragraph with counter ID by 1.  
+            */
+            function countIt() {
+                /* Calls incCount function.  .html() method Returns the content of the selected elements, 
+                which is returns the number that is returned from the incCount functions.   */
+                $("#counter").html(incCount);
+            }
+        </script>
+    </head>
+
+    <body>
+        <button onclick="countIt()">Click Me</button>
+        <div>
+            <p id="counter"></p>
+        </div>
+    </body>
+</html>

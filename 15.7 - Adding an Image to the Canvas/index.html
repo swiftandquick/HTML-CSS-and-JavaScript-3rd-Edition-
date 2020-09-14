@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>McKinley on Canvas</title>
+        <style>
+            #myCanvas {
+                width:  800px;
+                height:  600px;
+                margin:  0 auto;
+                display:  block;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas width="800" height="600" id="myCanvas"></canvas>
+        <script>
+            var canvas = document.getElementById('myCanvas');
+            var context = canvas.getContext('2d');
+            /* img is an object with the instance of the Image class.  */
+            var img = new Image();
+            /* Gives img a source.  */
+            img.src = "images/doge.jpg";
+            /* Load the image.  */
+            img.onload = function() {
+                /* Draw the image at (10, 10) coordinate.  */
+                context.drawImage(img, 10, 10);
+            }
+        </script>
+    </body>
+</html>

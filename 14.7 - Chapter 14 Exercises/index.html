@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chapter 14 Exercises</title>
+        <style>
+            ul {
+                list-style:  none;
+            }
+            /* List items is displayed horizontally.  */
+            ul li {
+                display:  inline-block;
+                border:  1px solid black;
+                background:  gray;
+                padding:  5px;
+            }
+            a {
+                font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size:  2rem;
+                text-decoration:  none;
+            }
+            /* List item enlarges by 50% when being hovered over.  */ 
+            ul li:hover {
+                transform:  scale(1.5);
+            }
+            div {
+                margin:  auto;
+            }
+            /* span can be transform by declaring its display as block or inline-block.  
+            The span section has pink background, is twice as big, and move right and down.  */
+            #span {
+                display:  inline-block;
+                background:  pink;
+                transform:  scale(2) translate(10px, 5px);
+            }
+            /* Multiple transformation on click.  */
+            #multitrans {
+                width:  50px; 
+                height:  50px; 
+                background:  pink; 
+                transition:  transform 3s linear, background 1s ease;
+            }
+            #multitrans:hover {
+                transform:  scale(1.5);
+            }
+            /* Spin an element upside down.  */
+            #q1 {
+                width:  50px; 
+                height:  50px; 
+                background:  linear-gradient(#cb2ff6 50%, lightblue 50%);
+            }
+            #q1:hover {
+                transform:  rotate(180deg);
+            }
+            #q2, #q4, .special, #q6 {
+                width:  50px; 
+                height:  50px; 
+                background:  pink; 
+            }
+            /* Enlarge the block to 3 times as big.  */
+            #q2:hover {
+                transform:  scale(3);
+            }
+            /* Slant an element by 5 degrees.  slant() doesn't exist.  */
+            #q4:hover {
+                transform:  skew(5deg);
+            }
+            /* Shrinks as half the size, then slants 45 degrees counterclockwise.  */
+            .special:hover {
+                transform:  scale(0.5) skew(315deg);
+            }
+            /* 1m doesn't exist because m (meter) removed from css.  */
+            #q6:hover {
+                transform:  perspective(1in) rotate(45deg);
+            }
+            /* Move z-axis by 15 pixels.  */
+            #q7 {
+                width:  60px; 
+                height:  60px; 
+                left:  100px;
+                background:  pink; 
+            }
+            /* Move an element 15 pixels on the z-axis.  */
+            #q7:hover {
+                transform:  perspective(50px) translatez(15px);
+            }
+            /* The linear timing functtion animates the transition evenly across the time period.  */
+            #q10 {
+                width:  50px;
+                height:  50px;
+                background:  pink;
+                transition:  width 2s;
+                transition-timing-function:  linear;
+            }
+            #q10:hover {
+                width:  500px;
+            }
+            #gallery img {
+                display:  block;
+                margin:  auto;
+            }
+            #a, #c {
+                transform-origin:  top right;
+                transform:  skew(15deg);
+            }
+            #b, #d {
+                transform-origin:  bottom right;
+                transform:  skew(345deg);
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="#multitrans">multitrans</a></li>
+            <li><a href="#q4">q4</a></li>
+            <li><a href="#q10">q10</a></li>
+            <li><a href="#gallery">gallery</a></li>
+        </ul>
+        <br>
+        <p>We are <span id="span">here!  </span></p>
+        <br>
+        <div id="multitrans"></div>
+        <br>
+        <div id="q1"></div>
+        <br>
+        <div id="q2"></div>
+        <br>
+        <div id="q4"></div>
+        <br>
+        <div class="special"></div>
+        <br>
+        <div id="q6"></div>
+        <br>
+        <div id="q7"></div>
+        <br>
+        <div id="q10"></div>
+        <br>
+        <div id="gallery">
+            <img id="a" src="a.bmp">
+            <img id="b" src="b.bmp">
+            <img id="c" src="c.bmp">
+            <img id="d" src="d.bmp">
+        </div>
+    </body>
+</html>

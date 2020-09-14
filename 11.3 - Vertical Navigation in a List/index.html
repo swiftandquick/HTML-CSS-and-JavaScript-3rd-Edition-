@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>About Us</title>
+        <style>
+            body {
+                font:  12pt Verdana, Arial, Georgia, sans-serif;
+            }
+            nav {
+                width:  150px;
+                float:  left;
+                margin-top:  12px;
+                margin-right:  18px;
+            }
+            nav ul {
+                list-style:  none;
+                margin:  12px 0px 0px 0px;
+                padding:  0px;
+            }
+            nav li {
+                border-bottom:  1px solid #ffffff;
+            }
+            nav li a:link, nav li a:visited {
+                font-size:  10pt;
+                font-weight:  bold;
+                display:  block;
+                padding:  3px 0px 3px 3px;
+                background-color:  #628794;
+                color:  #ffffff;
+            }
+            nav li a:hover, nav li a:active {
+                font-size:  10pt;
+                font-weight:  bold;
+                display:  block;
+                padding:  3px 0px 3px 3px;
+                background-color:  #c1a02e;
+                color:  #000000;
+            }
+            /* Since section come after nav, section floats to the left of nav.  */
+            section {
+                width:  550px;
+                float:  left;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#one">Mission</a></li>
+                <li><a href="#two">History</a></li>
+                <li><a href="#three">Executive Team</a>
+                    <ul>
+                        <li><a href="#alpha">&raquo; CEO</a></li>
+                        <li><a href="#beta">&raquo; CFO</a></li>
+                        <li><a href="#gamma">&raquo; COO</a></li>
+                        <li><a href="#delta">&raquo; Minions</a></li>
+                    </ul>
+                </li>
+                <li><a href="#four">Contact Us</a></li>
+            </ul>
+        </nav>
+        <section>
+            <header>
+                <h1>About Us</h1>
+            </header>
+            <p>On the introductory pages of main sections, it can be useful 
+            to repeat the secondary navigation and provide more context, 
+            such as:  </p>
+            <ul>
+                <li id="one">Mission:  Learn more about our corporate mission 
+                and philanthropic efforts.  </li>
+                <li id="two">History:  Read about our corporate history and 
+                learn how we grew to become the largest widget maker in the 
+                country.  </li>
+                <li id="three">Executive Team:  Our team of executives makes 
+                the company run like a well-oiled machine (also usefujl for 
+                making widgets).  
+                    <ul>
+                        <li id="alpha">CEO details...  </li>
+                        <li id="beta">CFO details...  </li>
+                        <li id="gamma">COO details...  </li>
+                        <li id="delta">Minions details...  </li>
+                    </ul>
+                </li>
+                <li id="four">Contact Us:  Here you can find multiple methods 
+                for contacing us (and we really do care what you have to say).  
+                </li>
+            </ul>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chapter 15 Quizes</title>
+        <style>
+            .box {
+                border:  solid 1px black;
+                width:  100px;
+                height:  100px;
+            }
+
+            #q1a {
+                animation-name:  q1aChange;
+                /* Defines how long an animation should play in an iteration.  */
+                animation-duration:  1s;
+                /* cubic-bezier takes 4 values.  */
+                animation-timing-function:  cubic-bezier(0, 0.5, 1, 1);
+                animation-iteration-count:  infinite;
+                animation-direction:  alternate;
+            }
+
+            /* 0% (beginning) to 100% (end).  */
+            @keyframes q1aChange {
+                0% {
+                    background-color:  yellow;
+                }
+                100% {
+                    background-color:  blue;
+                }
+            }
+
+            #q1b {
+                animation-name:  q1bChange;
+                animation-duration:  1s;
+                /* linear is the same as cubic-bezier(0, 0, 1, 1).  */
+                animation-timing-function:  linear;
+                animation-iteration-count:  infinite;
+                animation-direction:  alternate;
+            }
+
+            /* from (beginning) to to (end).  */
+            @keyframes q1bChange {
+                from {
+                    background-color:  red;
+                }
+                to {
+                    background-color:  green;
+                }
+            }
+
+            #q2 {
+                animation-name:  q2Change;
+                animation-duration:  2s;
+                animation-timing-function:  ease-in-out;
+                animation-iteration-count:  infinite;
+                animation-direction:  alternate;
+            }
+
+            /* From white (default) (0%) to black at (50%), which should take 1 second, 
+            then change back to original state, which is white.  */
+            @keyframes q2Change {
+                50% {
+                    background-color:  black;
+                }
+            }
+
+            /* 5 seconds per iteration, 4 iterations, animation will play for 20 seconds.  */
+            #q6 {
+                animation:  threeTimes 5s 4;
+                animation-direction:  alternate;
+            }
+
+            @keyframes threeTimes {
+                0% {
+                    background-color:  purple;
+                }
+                100% {
+                    background-color:  pink;
+                }
+            }
+
+            #q7 {
+                position:  relative;
+                left:  0%;
+                animation:  q7Change 2s infinite;
+                animation-direction:  alternate;
+            }
+
+            @keyframes q7Change {
+                from {
+                    /* calc() calculates exact values from percentages.  */
+                    left:  calc(100% - 100px);
+                }
+                to {
+                    left:  0%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="box" id="q1a"></div>
+        <div class="box" id="q1b"></div>
+        <div class="box" id="q2"></div>
+        <div class="box" id="q6"></div>
+        <div class="box" id="q7"></div>
+
+        <canvas id="canvas" width="300px" height="522px"></canvas>
+
+        <script>
+            // Question 8.  
+            
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext('2d');
+
+            var startPoint = (60 * Math.PI) / 360; /* Starts at radian equivalent to 60 degrees.  */
+            var endPoint = (180 * Math.PI) / 360; /* Ends at radiant equivalent to 180 degrees.  */
+
+            context.beginPath();
+            /* Starts at (0, 0) with diameter 200.  Draws clockwise.  */
+            context.arc(0, 0, 200, startPoint, endPoint, false);
+            context.strokeStyle = "red";
+            context.stroke();
+            context.fillStyle = "pink";
+            context.fill();
+
+            // Question 9.  
+
+            /* Create object img, an object of Image instance.  */
+            var img = new Image();
+
+            /* Links the source of image.  */
+            img.src = "images/doge.jpg";
+
+            img.onload = function() {
+                /* Starts drawing image at (0, 0).  */
+                context.drawImage(img, 0, 200);
+            }
+
+            // Question 10.  
+
+            var display = new Image();
+            /* Each spirte is roughly 100x100 in size.  */
+            display.src = "images/count.bmp";
+
+            /* There are 4 values, starts with 1.  */
+            var values = 4;
+            var currentValue = 1;
+
+            var draw = function() {
+                context.clearRect(0, 0, 100, 100);
+                /* 100 * (currentValue - 1) is the starting x coordinate, if current display 
+                value is 1, then the starting x coordinate is 0.  The animation starts at the 
+                coordinate (0, 422), right below */
+                context.drawImage(display, 100 * (currentValue - 1), 0, 100, 100, 0, 422, 100, 100);
+            
+                /* If currentValue reaches to 4, then it's reset to 1.  Otherwise it increments.  */
+                if (currentValue === values) {
+                    currentValue = 1;
+                }
+                else {
+                   currentValue++;
+               }
+            }
+
+            /* The function draw is called once every half seconds.  */
+            setInterval(draw, 500);
+        </script> 
+
+        <br>
+        
+        </script>
+
+    </body>
+</html>

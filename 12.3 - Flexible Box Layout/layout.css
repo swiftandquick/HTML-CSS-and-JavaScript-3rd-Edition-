@@ -1,0 +1,55 @@
+#main {
+    width:  100%;
+    /* Creates a flex container.  Elements inside #main align from left to right.  */
+    display:  flex;
+}
+
+/* order:  Controls which element inside the flex container to appear first.  The lower 
+the number is, the first it will appear.  Putting order as any number less than 0 will 
+place it on left of #main_content, since #main_content is written before #secondary_content, 
+the default order value is 0, so for #secondary_content to be on the left of #main_content, 
+the order attribute's value needs to be a negative value, such as -1. */
+#secondary_content {
+    order:  -1;
+}
+
+footer {
+    width:  100%;
+    background-color:  #cccccc;
+    text-align:  center;
+    font-style:  italic;
+}
+
+#secondary_content {
+    width:  200px;
+    background-color:  #52f471;
+}
+
+#tertiary_content {
+    width:  125px;
+    background-color:  #f452d5;
+}
+
+#secondary_content ul {
+    list-style:  none;
+    margin:  12px 0px 0px 12px;
+    padding:  0px;
+}
+
+#secondary_content li a:link, #secondary_content li a:visited {
+    font-size:  12pt;
+    font-weight:  bold;
+    padding:  3px 0px 3px 3px;
+    color:  #000000;
+    text-decoration:  none;
+    display:  block;
+}
+
+#secondary_content li a:hover, #secondary_content li a:active {
+    font-size:  12pt;
+    font-weight:  bold;
+    padding:  3px 0px 3px 3px;
+    color:  #ffffff;
+    text-decoration:  none;
+    display:  block;
+}

@@ -1,0 +1,32 @@
+table {
+    border:  2px solid black;
+    border-collapse:  collapse;
+    padding:  3px;
+    width:  100%;
+}
+
+tr, th, td {
+    border:  2px solid black;
+    border-collapse:  collapse;
+    padding:  3px;
+}
+
+thead {
+    background-color:  #ff0000;
+    color:  #ffffff;
+}
+
+.aligntop {
+    vertical-align:  top;
+}
+
+.description {
+    font-size:  14px;
+    font-weight:  bold;
+    vertical-align:  middle;
+    text-align:  center;
+}
+
+.size {
+    text-align:  center;
+}

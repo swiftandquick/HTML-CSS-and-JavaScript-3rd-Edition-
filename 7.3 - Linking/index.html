@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Linking</title>
+        <style>
+
+            /* Use margin-top set the empty paragraph's margin-top to 1000 pixels.  */
+            #longBR {
+                margin-top:  1000px;
+            }
+
+            /* Hyperlink has not been visited previously.  */
+            a:link {
+                color:green;
+            }
+
+            /* Hyperlink has been visited previously and is present in browser's memory.  */
+            a:visited {
+                color:red;
+            }
+
+            /* Hyperlink when mouse hovers over.  */
+            a:hover {
+                color:brown;
+            }
+
+            /* Hyperlink when user activates a link.  It often occurs in device that doesn't use mouse.  */
+            a:focus {
+                color:gray;
+            }
+
+            /* Hyperlink that is clicked but yet to released.  */
+            a:active {
+                color:darkslateblue;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--Downable document.-->
+        <a href="myWordDoc.docx">my word-processed document</a>
+        <br>
+
+        <!--Same as above but it support all modern browser except Internet Explorer.  -->
+        <a href="myWordDoc.docx" download>my word-processed document</a>
+        <br>
+
+        <!--Go to a global web page.-->
+        <a href="https://www.google.com/">Go to Google</a>
+        <br>
+
+        <!--Go to a global web page with title.  Hoever over it.-->
+        <a href="https://www.google.com/" title="Go to Google">Go to Google with title</a>
+        <br>
+        
+        <!--Go to a global web page on a new window.-->
+        <a href="https://www.google.com/" target="_blank">Go to Google on a new tab</a>
+        <br>
+
+        <!--Go to a global web page on a new window pop up with fixed size.  Not sure why there is return false.  -->
+        <a href="https://www.google.com/" onClick="MyWindow=window.open('http://www.google.com', 'MyWindow', 'width=1200,height=800'); return false;">Go to Google on a new window pop up</a>
+        <br>
+
+        <!--Create a link within an anchor.-->
+        <a href="#Anchor">Go to anchor location</a>
+        <br>
+
+        <!--Go to a local web page.-->
+        <a href="secondpage.html">Go to second page</a>
+        <br>
+
+        <!--Go to another page's anchored element.-->
+        <a href="secondpage.html#secret">Go to second page's bottom</a>
+        <br>
+
+        <!--Go to a web page within a folder.-->
+        <a href="Secret Folder/thirdpage.html">Go to third page</a>
+        <br>
+
+        <!--Send it to my email.-->
+        <a href="mailto:chenyMA16@gmail.com">Send email</a>
+        <br>
+
+        <!--Send it to my email, with subject (title), message (body), and more.
+        After I type my email address, I put a question mark after it.  -->
+        <a href="mailto:chenyMA16@gmail.com?
+        subject=Book Question
+        &cc=ychomework4@gmail.com
+        &bcc=ychomework5@gmail.com
+        &body=What is going on?">
+            Send a direct email to my address</a>
+
+        <!--Don't repetitively type <br>, <br> is self-closing and can be closed.  -->
+        <br>
+            <p id="longBR"></p>
+        </br>
+
+        <p id="Anchor">Anchor location.</p>
+
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Moving Element</title>
+        <style>
+            div {
+                width:  15rem;
+                border:  solid 1px black;
+                padding:  0.25rem 1.2rem;
+                background:  linear-gradient(#f5ea70 0%, #ffffff 100%);
+                text-align:  center;
+            }
+            /* Places the element at the center of the container.  */
+            .center {
+                position:  absolute;
+                top:  50%;
+                left:  50%;
+            }
+            /* Moves leftward and upward when the mouse is hover over.  */
+            .center:hover {
+                transform:  translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <h1>Center Me</h1>
+        </div>
+    </body>
+</html>

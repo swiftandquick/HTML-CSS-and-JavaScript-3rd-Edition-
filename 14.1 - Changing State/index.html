@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Make the Button Bigger</title>
+        <style>
+            button {
+                font-size:  1.5rem;
+                border-radius:  10px;
+                border:  solid 1px #940c94;
+                /* Background's top part is purple, bottom part is white.  */
+                background:  linear-gradient(#cb2ff6 0%, #ffffff 100%);
+                padding:  0.25rem;
+                margin:  1rem;
+            }
+            /* Enlarge.  */
+            #enlarge:hover {
+                transform:  scale(1.2);
+            }
+            /* Flip horizontally.  */
+            #rotatex:hover {
+                transform:  scalex(-1);
+            }
+            /* Flip vertically.  */
+            #rotatey:hover {
+                transform:  scaley(-1);
+            }
+            /* Moves 50 pixels to the right, 20 pixels down.  */
+            #translate:hover {
+                transform:  translate(50px, 20px);
+            }
+        </style>
+    </head>
+    <body>
+        <button id="enlarge">Click Me</button>
+        <button id="rotatex">Click Me</button>
+        <button id="rotatey">Click Me</button>
+        <button id="translate">Click Me</button>
+    </body>
+</html>

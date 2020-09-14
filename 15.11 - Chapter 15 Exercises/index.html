@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chapter 15 Exercises</title>
+        <style>
+            div {
+                border:  solid 1px black;
+                height:  100px;
+                width:  100px;
+            }
+
+            #box1 {
+                animation:  animation1 2s infinite;
+                animation-direction:  alternate-reverse;
+            }
+
+            /* Because animation-direction is alternate-reverse, it starts with green color.  */
+            @keyframes animation1 {
+                from {
+                    background-color:  yellow;
+                }
+                to {
+                    background-color:  green;
+                }
+            }
+
+            #box2 {
+                animation:  animation2 2s infinite;
+                animation-direction:  alternate;
+            }
+
+            /* Starts as yellow, then become orange, then red.  */
+            @keyframes animation2 {
+                0% {
+                    background-color:  yellow;
+                }
+                50% {
+                    background-color:  orange;
+                }
+                100% {
+                    background-color:  red;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box1"></div>
+        <div id="box2"></div>
+
+        <canvas id="myCanvas" width="100px" height="100px"></canvas>
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext('2d');
+
+            var display = new Image();
+            display.src = "images/count.bmp";
+
+            var frames = 3;
+            var currentFrame = 0;
+
+            var draw = function() {
+                context.clearRect(0, 0, 100, 100);
+                context.drawImage(display, currentFrame * 100, 0, 100, 100, 0, 0, 100, 100);
+                if (currentFrame === frames) {
+                    currentFrame = 0;
+                }
+                else {
+                    currentFrame++;
+                }
+            }
+
+            /* Calls draw function once every quarter seconds.  */
+            setInterval(draw, 250);
+
+        </script>
+
+    </body>
+</html>

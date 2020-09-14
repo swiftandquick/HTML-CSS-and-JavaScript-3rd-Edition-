@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            /* margin:  Space between two elements.  
+            padding:  Space between content and border.  */
+            #container {
+                margin:  30px;
+                padding:  5px;
+                width:  300px;
+            }
+
+            #tabs {
+                padding:  0px;
+                width:  50px;
+            }
+
+            /* clear:  both:  Not allow float  on either side.  
+            Without clear:  both, the content box floats to the right side of div with container ID.  */
+            #content {
+                border:  1px solid #000000;
+                height:  100px;
+                width:  300px;
+                clear:  both;
+            }
+
+            /* border-radius:  Radius of outer border edge.  */
+            span {
+                margin:  5px;
+                width:  100px;
+                background-color:  #C0C0C0;
+                font-weight:  bold;
+                border-color:  1px solid #000000;
+                border-radius:  5px 5px 0px 0px;
+                padding:  3px;
+                float:  left;
+                text-align:  center;
+            }
+
+            /* space:hover:  span element will change when hover over it.  */
+            span:hover {
+                background-color:  #3030FF;
+                color:  #FFFFFF;
+                cursor:  pointer;
+            }
+
+            p {
+                font-weight:  bold;
+                text-align:  center;
+            }
+        </style>
+        <title>Sample Page</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="tabs">
+                <span>Name/Title</span>
+                <span>Contact Info</span>
+                <span>Biography</span>
+            </div>
+            <div id="content">
+                <p>Jimbo Jones</p>
+                <p>Rabble-Rouser</p>
+            </div>
+        </div>
+    </body>
+</html>

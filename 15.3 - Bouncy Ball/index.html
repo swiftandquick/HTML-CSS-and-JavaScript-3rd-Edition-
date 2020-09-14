@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bouncy Ball</title>
+    <style>
+        .ball {
+            position:  relative;
+            /* 75% to the left of the container.  */
+            left:  75%;
+            background-color:  #ffb33a;
+            width:  20rem;
+            height:  20rem;
+            border-radius:  10rem;
+            animation:  bounce 3s;
+            /* 1.5 is higher than the destination point (1), so the ball is keep 
+            moving the right then moves back to where it's supposed to be (75%).  */
+            animation-timing-function:  cubic-bezier(0, 0, 0.5, 1.5);
+        }
+        @keyframes bounce {
+            0% {
+                left:  0%;
+            }
+            100% {
+                left:  75%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class = "ball"></div>
+</body>
+</html>

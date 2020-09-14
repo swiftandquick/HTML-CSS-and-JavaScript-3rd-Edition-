@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Section 10 Exercises</title>
+        <style>
+            #empty {
+                margin-top:  5000px;
+            }
+        </style>
+    </head>
+    <body>
+        <span style="position:  absolute; left:  0px; top:  0px;">
+        Where would you like to</span>
+        <h1 style="position:  absolute; left:  80px;  top:  20px;">
+        GO TODAY?</h1>
+        <!-- "Hello world!" text is always at the middle-right side regardless of how I scroll.  
+        Because its position is fixed.  -->
+        <div id = "empty"></div>
+        <p style="position:  fixed; top:  50%;  right:  0;">Hello world!</p>
+        <div style="height:  80px;"><p></p></div>
+        <div style="width:  300px; height:  200px; padding:  50px; 
+        border:  1px solid red;"><p>Hello world!</p></div>
+        <img src="W3.bmp" style="float:  left;">
+        <p>&lt;-- This is a W3 icon.  </p>
+        <p style="clear:  both">This paragraph doesn't align with W3 icon.  </p>
+        <!-- The div element will hide rest of the paragraph if the text does not fit in.  -->
+        <div style="width:  150px; height:  60px;  overflow:  hidden;">
+            <p>The overflow attribute is set to hidden Unfortunately, this paragraph 
+            is way too big.  It's visible in HTML codes but on the web page, part of 
+            the content became invisible.  </p>
+        </div>
+        <img src="watermark.bmp" style="position:  fixed;  bottom:  0%;  left:  50%;">
+    </body>
+</html>

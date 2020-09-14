@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Section 11 Exercises</title>
+        <style>
+            #a {
+                border:  1px solid  black;
+                list-style-position:  outside;
+            }
+            #b {
+                border:  1px solid  black;
+                list-style-position:  inside;
+            }
+            li {
+                padding-left:  40px;
+            }
+            .hl {
+                list-style:  none;
+                display:  inline-block;
+                padding:  2px;
+                border:  1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <p>List A</p>
+        <ol>
+            <li id="a">1</li>
+            <li id="a">2</li>
+            <li id="a">3</li>
+        </ol>
+        <br>
+        <p>List B</p>
+        <ul>
+            <li id="b">1</li>
+            <li id="b">2</li>
+            <li id="b">3</li>
+        </ul>
+        <br>
+        <p>List C</p>
+        <ul style="list-style:  none;">
+            <li>A</li>
+            <li>B
+                <ol>
+                    <li>1</li>
+                    <li>2</li>
+                </ol>
+            </li>
+        </ul>
+        <br>
+        <p style="text-indent:  -1000em;">This content is hidden 
+            due to being pushed off screen to the left.  </p>
+        <br>
+        <ul>Monkeys</ul>
+        <!-- Background is place on top of the list of texts.  -->
+        <ul style="background-image:  url('logo.bmp'); background-repeat:  no-repeat;">
+            <li>Monkey #1</li>
+            <li>Monkey #2</li>
+            <li>Monkey #3</li>
+            <li>Monkey #4</li>
+            <li>Monkey #5</li>
+            <li>Monkey #6</li>
+            <li>Monkey #7</li>
+            <li>Monkey #8</li>
+            <li>Monkey #9</li>
+        </ul>
+        <ul class="hl">
+            <li class="hl">Option 1</li>
+            <li class="hl">Option 2</li>
+            <li class="hl">Option 3</li>
+        </ul>
+        <p>Click on the square.  </p>
+        <img src="square.bmp" usemap="#findthesquare" alt="Find the Square">
+        <map name="findthesquare">
+            <!-- An area inside the map.  -->
+            <area shape="rect" coords="150, 150, 200, 200"
+            href="https://www.squarespace.com/" alt="Square" title="Square">
+        </map>
+        <br>
+        <ul>
+            <li><a href="#A">Option 1</a></li>
+            <li><a href="#B">Option 2</a>
+                <ul>
+                    <li><a href="#BA">Option 2.1</a></li>
+                    <li><a href="#BB">Option 2.2</a></li>
+                </ul>
+            </li>
+            <li><a href="#C">Option 3</a></li>
+        </ul>
+        <br>
+        <!-- Another way other than using margin-top to create white space.  -->
+        <div style="height:  1000px;"></div>
+        <p id="A">A</p>
+        <p id="B">A</p>
+        <p id="BA">A</p>
+        <p id="BB">A</p>
+        <p id="C">C</p>
+    </body>
+</html>

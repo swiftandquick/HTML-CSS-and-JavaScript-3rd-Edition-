@@ -1,0 +1,57 @@
+#main {
+    display:  grid;
+    /* Left column is 150 pixels wide.  
+    Right column is 175 pixels wide.  
+    Center column is adjusted automatically.  */
+    grid-template-columns:  150px auto 175px;
+    /* grid-template-rows isn't very useful, since there are 3 columns and 1 row for #main.  */
+    grid-template-rows:  auto;
+    /* Set up the grid-template areas as these three separate sections.  */
+    grid-template-areas:  "secondary_content main_content tertiary_content";
+}
+
+#main_content {
+    grid-area:  main_content;
+    padding:  10px;
+}
+
+footer {
+    background-color:  #cccccc;
+    text-align:  center;
+    font-style:  italic;
+}
+
+#secondary_content {
+    grid-area:  secondary_content;
+    background-color:  #52f471;
+}
+
+#tertiary_content {
+    grid-area:  tertiary_content;
+    background-color:  red;
+    padding:  10px;
+}
+
+#secondary_content ul {
+    list-style:  none;
+    margin:  12px 0px 0px 12px;
+    padding:  0px;
+}
+
+#secondary_content li a:link, #secondary_content li a:visited {
+    font-size:  12pt;
+    font-weight:  bold;
+    padding:  3px 0px 3px 3px;
+    color:  #000000;
+    text-decoration:  none;
+    display:  block;
+}
+
+#secondary_content li a:hover, #secondary_content li a:active {
+    font-size:  12pt;
+    font-weight:  bold;
+    padding:  3px 0px 3px 3px;
+    color:  #ffffff;
+    text-decoration:  none;
+    display:  block;
+}

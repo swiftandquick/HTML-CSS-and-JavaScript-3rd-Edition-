@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ACME Widgets LLC</title>
+        <style>
+            body {
+                font:  12pt Verdana, Arial Georgia, sans-serif;
+            }
+            header {
+                width:  auto;
+            }
+            #logo {
+                float:  left;
+            }
+            /* nav floats to the left of logo because logo comes first.  */
+            nav {
+                float:  left;
+                margin:  85px 0px 0px 0px;
+                width:  400px;
+                background-color:  #628794;
+                border:  1px solid black;
+            }
+            nav ul {
+                margin:  0px;
+                padding:  0px;
+                /* No list style means no bullet points.  */
+                list-style:  none;
+                /* The line below isn't really needed, the list items need to be displayed 
+                in line, not the list itself.  */
+                display:  inline;
+            }
+            nav li {
+                /* Horizontal listing.  */
+                display:  inline;
+                line-height:  1.8em;
+            }
+            nav ul li a:link, nav ul li a:visited {
+                font-size:  10pt;
+                font-weight:  bold;
+                text-decoration:  none;
+                padding:  7px 10px 7px 10px;
+                background-color:  #628794;
+                color:  #ffffff;
+            }
+            nav ul li a:hover, nav ul li a:active {
+                font-size:  10pt;
+                font-weight:  bold;
+                text-decoration:  none;
+                padding:  7px 10px 7px 10px;
+                background-color:  #c6a648;
+                color:  #000000;
+            }
+            section {
+                width:  auto;
+                float:  left;
+                clear:  left;
+            }
+            section li span {
+                text-decoration:  none;
+                font-weight:  bold;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <img src="logo.bmp" alt="ACME Widgets LLC">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#one">About Us</a></li>
+                    <li><a href="#two">Products</a></li>
+                    <li><a href="#three">Support</a></li>
+                    <li><a href="#four">Press</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <p><strong>ACME Widgets LLC</strong> is the greatest widget-maker 
+            in all the land.  </p>
+            <p>Don't believe us?  Read on...</p>
+            <ul>
+                <li id="one"><span>About Us</span>:  We are pretty great.  </li>
+                <li id="two"><span>Products</span>:  Our products are the best.  </li>
+                <li id="three"><span>Support</span>:  It is unlikely you will need support, 
+                but we provide it anyway.  </li>
+                <li id="four"><span>Press</span>:  Read what others are saying (about how 
+                great we are).  </li>
+            </ul>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Section 6 Exercises</title>
+        <style>
+            table, tr, th, td {
+                border:  1px solid black;
+            }
+            /* The position "inside" means bullet points will be inside the list item, as part of the list.  
+            Without this, the bullet points will align to the left because text-align for the body is center.  */
+            ul, ol, li {
+                list-style-position:  inside;
+            }
+        </style>
+    </head>
+    <body style="text-align:  center;">
+        <p><span style="font-weight:bold;">This is a </span>very short sentence.  </p>
+        <p>H<sub>2</sub>O</p>
+        <p>&copy; 2018, Webwonks Inc.</p>
+        <p>&#169; 2018, Webwonks Inc.</p>
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>Jane Doe</td>
+            </tr>
+        </table>
+        <p>3 &lt; 6</p>
+        <div style="column-count:  3; column-gap:  1px">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+        </div>
+        <p>Old Items</p>
+        <ul>
+            <li>Item 1
+                <ul>
+                    <li>Attribute 1</li>
+                    <li>Attribute 2</li>
+                    <li>Attribute 3</li>
+                </ul>
+            </li>
+            <li>Item 2</li>
+        </ul>
+        <p>New Items</p>
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- This isn't really an image map, but images placed inside a div element 
+        with carefully placed absolute  positions coordinates.  -->
+        <title>CSS Image Map Example</title>
+        <style>
+            /* Combined image is in relative position.  */
+            #theImg {
+                width:  400px;
+                height:  500px;
+                background:  url(paw.bmp) no repeat;
+                position:  relative;
+                border:  1px solid #000000;
+                margin:  0 auto;
+            }
+            #theImg ul {
+                margin:  0px;
+                padding:  0px;
+                list-style:  none;
+            }
+            /* img elements inside theImg is in absolute position.  */
+            #theImg img {
+                position:  absolute;
+                text-indent:  -1000em;
+            }
+            #theImg a:hover {
+                border:  4px dashed #ffff00;
+            }
+            /* This is the green image, starts with top-left coordinate (0px, 0px).  
+            The green image doesn't show at top-left corner of the entire web page, 
+            but rather, it shows at the top-left corner of the div element.  */
+            #mc img {
+                top:  0px;
+                left:  0px;
+                width:  231px;
+                height:  146px;
+            }
+            #su img {
+                top:  0px;
+                left:  236px;
+                width:  164px;
+                height:  250px;
+            }
+            #st img {
+                top:  150px;
+                left:  0px;
+                width:  231px;
+                height:  100px;
+            }
+            #di img {
+                top:  255px;
+                left:  0px;
+                width:  160px;
+                height:  245px;
+            }
+            #sh img {
+                top:  255px;
+                left:  165px;
+                width:  235px;
+                height:  110px;
+            }
+            #au img {
+                top:  370px;
+                left:  165px;
+                width:  235px;
+                height:  130px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="theImg">
+            <ul>
+                <li id="mc"><img src="1.bmp" title="Green"></li>
+                <li id="su"><img src="2.bmp" title="Blue"></li>
+                <li id="st"><img src="3.bmp" title="Red"></li>
+                <li id="di"><img src="4.bmp" title="Purple"></li>
+                <li id="sh"><img src="5.bmp" title="Yellow"></li>
+                <li id="au"><img src="6.bmp" title="Orange"></li>
+            </ul>
+        </div>
+    </body>
+</html>
