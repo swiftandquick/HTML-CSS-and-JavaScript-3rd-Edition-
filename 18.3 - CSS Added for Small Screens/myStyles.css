@@ -1,0 +1,55 @@
+/* Mobile specific styles.  */
+
+/* Headlines.  */
+h1, h2 {
+    position:  absolute;
+    left: 5%;
+}
+
+h1 {
+    font-size:  2em;
+    top: 2.5rem;
+}
+
+h2 {
+    font-size:  1.5em;
+    top: 5rem;
+}
+
+/* Navigation bar.  */
+nav {
+    width:  100%;
+    background-color:  #000;
+    color:  #fbd91f;
+}
+
+nav ul {
+    padding-top:  0.15em;
+    padding-bottom:  0.15em;
+}
+
+nav ul li {
+    margin:  0 0 0 0.5em 0.2em;
+}
+
+/* Article.  */
+article {
+    width:  100%;
+    padding:  0.25em;
+}
+
+article img {
+    width:  100%;
+    height:  auto;
+}
+
+/* Aside.  */
+aside {
+    width:  100%;
+}
+
+/* Not used.  */
+aside img {
+    width:  100%;
+    height:  auto;
+}

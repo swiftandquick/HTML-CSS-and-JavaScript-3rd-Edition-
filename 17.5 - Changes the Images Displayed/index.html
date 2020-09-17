@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1;">
+        <title>Changing the Images Displayed</title>
+    </head>
+    <body>
+        <!-- Choose an image from the set of images to display based on the devices’ pixel densities.  -->
+        <img srcset="images/myImage.bmp 1x, 
+                    images/myImage-2x.bmp 2x, 
+                    images/myImage-3x.bmp 3x" 
+                src="images/myImage.bmp" alt="My Image">
+
+        <!-- Choose an image from the set of images to display based on the devices’ width.  -->
+        <img srcset="images/myImage.bmp 100w, 
+                    images/myImage-2x.bmp 200w, 
+                    images/myImage-3x.bmp 400w" 
+                src="images/myImage.bmp" alt="My Image">
+        <!-- Use the <picture> element to contain <source> elements.  Each <source> element represents 
+        what image should be used based on the media attribute's value.  -->
+        <picture>
+            <source srcset="images/myImage.bmp 1x, 
+                            images/myImage-2x.bmp 2x, 
+                            images/myImage-3x.bmp hd"
+                    media="max-width:  30rem">
+            <source srcset="images/myImage.bmp 1x, 
+                            images/myImage-2x.bmp 2x, 
+                            images/myImage-3x.bmp hd"
+                    media="max-width:  50rem">
+            <img src="images/myImage.bmp" alt="My Image">
+        </picture>
+    </body>
+</html>

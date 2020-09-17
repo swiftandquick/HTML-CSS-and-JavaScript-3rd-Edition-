@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* Original color is blue.  */
+            body {
+                color:  blue;
+                font-family:  "Handwriting - Dakota", Papyrus;
+            }
+            /* First breakpoint is for all devices with browser width between 480px and 1200px.  */
+            @media all and (min-width:480px) and (max-width:1200px) {
+                body {
+                    color:  red;
+                }
+            }
+            /* Second breakpouint is for computer color screens that a browser that has the width of at least 1201px.  
+            On a computer, if browser's width increases to 1201px, then the text color turns green.  */
+            @media screen and (min-width:1201px) {
+                body {
+                    color:  green;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+            Etiam id purus nec eros semper luctus.  Proin nisl lectus, 
+            ullamcorper ultrices leo in, tristique rutrum risus.  Morbi 
+            congue diam tempor lorem semper, congue tempor turpis 
+            pretium.  Nunc eget dui ut lorem auctor ornare.  Vivamus 
+            lectus purus, vehicula eu velit eu, iaculis ultrices dui.  
+            Aliquam consectetur risus non ligula blandit, et gravida 
+            lectus bibendum.  Etiam laoreet luctus nibh.  Nulla sit amet 
+            lorem quis arcu accumsan mollis.  
+        </p>
+    </body>
+</html>

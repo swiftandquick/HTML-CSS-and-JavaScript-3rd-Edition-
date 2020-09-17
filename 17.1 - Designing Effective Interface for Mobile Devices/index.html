@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Design a viewport suitable for mobile devices.  
+            Width is set equal to device's width rather than rendered width.  
+            Initial scale is 1, which gives a 1:1 ratio between device-independent pixels and CSS pixels.  
+            It allows the page to take advantage of the full landscape width when device rotates that way.  -->
+        <meta charset="utf-8" 
+            name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mobile Device Interface</title>
+        <style>
+            /* Initially set all text with font size 16px.  */
+            *, body {
+                font-size:  16px;
+            }
+            /* Adjust internal elements to be larger or smaller with percentage font sizes, rem, or em.  */
+            h1 {
+                font-size:  250%;
+            }
+            h2 {
+                font-size:  2rem;
+            }
+            h3 {
+                font-size:  1.8rem;
+            }
+            p {
+                font-size:  1.2rem;
+            }
+            /* Adjust line-height so that my text isn't too far away from headlines or too close together.  */
+            h1, h2, h3 {
+                line-height:  0.8;
+            }
+            p {
+                line-height:  1.1;
+            }
+            /* 48x48 pixels is the minimum size that should be set for buttons on mobile devices.  */
+            nav a {
+                width:  48px;
+                height:  48px;
+                background-color:  green;
+                display:  block;
+            }
+        </style>
+    </head>
+    <body>
+        <nav><a href="http://www.google.com">Google</a></nav>
+        <h1>Outer Title</h1>
+        <h2>Middle Title</h2>
+        <h3>Inner Title</h3>
+        <p>Always move forward no matter what.  </p>
+    </body>
+</html>

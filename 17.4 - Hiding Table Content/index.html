@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="em">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Basic HTML Table</title>
+        <style>
+            /* Vertical overflow contents are hidden, horizontal overflow contents are 
+            displayed when contents user scrolls to the right.  */
+            .responsive {
+                width:  100%;
+                margin-bottom:  15px;
+                overflow-y:  hidden;
+                overflow-x:  scroll;
+                -ms-overflow-style:  -ms-autohiding-scrollbar;
+                border:  1px solid #ddd;
+                -webkit-overflow-scrolling:  touch;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- This is from 17.2.  -->
+        <div class="responsive">
+            <table width="100%" border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>URL</th>
+                        <th>RWD?</th>
+                        <th>Windows</th>
+                        <th>Macintosh</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Adobe Dreamweaver</td>
+                        <td>http://www.adobe.com/products/dreamweaver.html</td>
+                        <td>yes</td>
+                        <td>yes</td>
+                        <td>yes</td>
+                    </tr>
+                    <tr>
+                        <td>Macaw</td>
+                        <td>http://macaw.co/</td>
+                        <td>yes</td>
+                        <td>yes</td>
+                        <td>yes</td>
+                    </tr>
+                    <tr>
+                        <td>Coffee Cup Responsive Layout Maker Pro</td>
+                        <td>http://www.coffeecup.com/responsive-layout-maker-pro/</td>
+                        <td>yes</td>
+                        <td>yes</td>
+                        <td>yes</td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft Notepad</td>
+                        <td>http://www.notepad.org/</td>
+                        <td>yes</td>
+                        <td>yes</td>
+                        <td>yes</td>
+                    </tr>
+                    <tr>
+                        <td>Tummult Hype</td>
+                        <td>http://tumult.com/hype/</td>
+                        <td>yes</td>
+                        <td>yes</td>
+                        <td>yes</td>
+                    </tr>
+                </tbody>            
+            </table>
+        </div>
+    </body>
+</html>
