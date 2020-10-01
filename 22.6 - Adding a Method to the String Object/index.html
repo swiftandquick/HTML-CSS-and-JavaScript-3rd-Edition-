@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Test of Heading Method</title>
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            function addHeading(level) {
+                // If 1 is passed as argument, html will be h1.  
+                var html = "h" + level;
+                // this refers to the current object, which is a String object.    
+                var text = this.toString();
+                var opentag = "<" + html + ">";
+                var closetag = "</" + html + ">";
+                return opentag + text + closetag;
+            }
+            /* Use prototype keyword to add it as a method of String object.  
+            Set heading equal to addHeading.  */
+            String.prototype.heading = addHeading;
+            /* Use the String object to call the addHeading() function, while 
+            passes int as argument.  */
+            document.write("This is a heading 1".heading(1));
+            document.write("This is a heading 2".heading(2));
+            document.write("This is a heading 3".heading(3));
+        </script>
+    </body>
+</html>

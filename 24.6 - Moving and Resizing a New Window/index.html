@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Moving and Resizing Windows</title>
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Moving and Resizing Windows</h1>
+
+        <form name="changeform">
+            <p>
+                <strong>Resize to:  </strong><br>
+                <input size="5" type="text" name="w"> pixels wide and 
+                <input size="5" type="text" name="h"> pixels high.  
+            </p>
+            <p><strong>-- AND/OR --</strong></p>
+            <p>
+                <strong>Move to:  </strong>
+                X-position:  <input size="5" type="text" name="x">
+                Y-position:  <input size="5" type="text" name="y">
+            </p>
+            <p><input type="button" value="Change Window" id="doIt"></p>
+        </form>
+
+        <script>
+            function doIt() {
+                /* If there is input for w (width) and h (height), then resize the 
+                new window to the entered w and h.  */
+                if ((document.changeform.w.value) && (document.changeform.h.value)) {
+                    NewWin.resizeTo(document.changeform.w.value, 
+                                    document.changeform.h.value);
+                }
+                /* If there is an input for x and y coordinates, then move the new 
+                window to the entered coordinate on pop up.  */
+                if ((document.changeform.x.value) && (document.changeform.y.value)) {
+                    NewWin.moveTo(document.changeform.x.value, 
+                                    document.changeform.y.value);
+                }
+            }
+            /* After the web page is loaded, open a new window called NewWin, with 
+            default width 200 and default height 100, which can be changed.  
+            I have to allow pop-up to see how this code works.  */
+            window.addEventListener("load", function() {
+                NewWin = window.open('', 'NewWin', 'Width=200, height=100');
+            });
+            /* Click on #doIt button will call the doIt() method, which is used to 
+            resize and move the pop up window (NewWin).  */
+            document.getElementById("doIt").addEventListener("click", doIt);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hiding or Showing Objects</title>
+        <meta name="viewport" 
+            content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1 id="heading1">This is the first heading.  </h1>
+        <h1 id="heading2">This is the second heading.  </h1>
+        <!-- Exercise Problem #3:  -->
+        <h1 id="heading3">This is the third heading.  </h1>
+        <p>Using the W3C DOM, you can choose whether to show or hide 
+            the headings on this page using the checkboxes below.  </p>
+        <form name="checkboxform">
+            <!-- checkbox1 is initially checked.  On click calls showHide().  -->
+            <input type="checkbox" name="checkbox1"
+                onclick="showHide();" checked>
+            <span style="font-weight:bold;">Show first heading.  </span>
+            <br>
+            <!-- checkbox2 is initially checked.  On click calls showHide().  -->
+            <input type="checkbox" name="checkbox2"
+                onclick="showHide();" checked>
+            <span style="font-weight:bold;">Show second heading.  </span>
+            <br>
+            <!-- Exercise Problem #3:  -->
+            <input type="checkbox" name="checkbox3"
+                onclick="showHide();" checked>
+            <span style="font-weight:bold;">Show third heading.  </span>
+        </form>
+
+        <script>
+            function showHide() {
+                /* Exit out of the function if I cannot retrieve any element byy ID.  */
+                if (!document.getElementById) {
+                    return;
+                }
+                /* Get heading1 and heading2 by ID.  */
+                var heading1 = document.getElementById("heading1");
+                var heading2 = document.getElementById("heading2");
+                /* Exercise Problem #3:  */
+                var heading3 = document.getElementById("heading3");
+                /* showheading1 and showheading2 is equal to checkbox1 and checkbox2 
+                being checked respectively.  */
+                var showheading1 = document.checkboxform.checkbox1.checked;
+                var showheading2 = document.checkboxform.checkbox2.checked;
+                /* Exercise Problem #3:  */
+                var showheading3 = document.checkboxform.checkbox3.checked;
+                /* Set heading1 to visible if heading1 is checkbox1 is checked, otherwise 
+                it will be hidden.  If showheading1 is true, which means it's checked, 
+                heading1.style.visibility is set to "visible", otherwise, it's set to 
+                "hidden".  Same applies to heading2 and checkbox2.  Ternary operator.  */
+                heading1.style.visibility = (showheading1) ? "visible" : "hidden";
+                heading2.style.visibility = (showheading2) ? "visible" : "hidden";
+                /* Exercise Problem #3:  */
+                heading3.style.visibility = (showheading3) ? "visible" : "hidden";
+            }
+        </script>
+    </body>
+</html>

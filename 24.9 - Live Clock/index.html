@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Timeout Example</title>
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Live Clock</h1>
+        <p>The updating clock counter.  </p>
+        <p>Press RESTART or STOP to restart or stop the clock.  </p>
+        <p id="showText"></p>
+        <section>
+            <button type="button" id="restart">RESTART</button>
+            <button type="button" id="stop">STOP</button>
+        </section>
+
+        <script>
+            var hour = 0;
+            var minute = 0;
+            var second = 0;
+
+            // Call the update function 2 seconds after first load.  
+            timeoutID = window.setTimeout(Update, 1000);
+
+            function Update() {
+                second++;
+                if (second === 60) {
+                    second = 0;
+                    minute++;
+                }
+                if (minute === 60) {
+                    minute = 0;
+                    hour++;
+                }
+                var textField = document.getElementById("showText");
+                /* The value counter changes once every 2 seconds.  */
+                textField.innerHTML = hour + ":" + minute + ":" + second;
+                // Set another timeout for the next count, function calls itself.  
+                timeoutID = window.setTimeout(Update, 1000);
+            }
+
+            // Set event listeners for the buttons.  
+            document.getElementById("restart").addEventListener("click", function() {
+                // Reset hour, minute, second to 0.  
+                hour = 0; 
+                minute = 0; 
+                second = 0; 
+                Update(); // Call Update() method to start counting from 0.  
+            });
+
+            // Clears time out for timeID, which means Update() will no longer be invoked, and counter stops increasing.  
+            document.getElementById("stop").addEventListener("click", function() {
+                window.clearTimeout(timeoutID);
+            });
+                
+        </script>
+    </body>
+</html>

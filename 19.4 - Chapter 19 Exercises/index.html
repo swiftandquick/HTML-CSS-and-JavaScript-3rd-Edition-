@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chapter 19 Exercises</title>
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!-- An image link that goes to gohere.html, it's originally red, 
+        after hovering over it, it will turn blue. -->
+        <a href="gohere.html" 
+            onmouseover="javascript:document.images['flasher'].src='images/flashing.bmp'"
+            onmouseout="javascript:document.images['flasher'].src='images/button.bmp'" >
+            <img src="images/button.bmp" id="flasher" style="border-style:none;"></a>
+
+        <!-- Without onmouseout, once I hover over button.bmp, it will turn 
+        into flashing.bmp indefinitely.  -->
+        <a href="gohere.html"
+            onmouseover="javascript:document.images['flasher2'].src='images/flashing.bmp'">
+            <img src="images/button.bmp" id="flasher2" style="border-style:none;"></a>
+
+        <!-- The above codes are not unobtrusive because it uses the onmouseover 
+        attribute to place the JavaScript right in the HTML.  -->
+
+        <br>
+
+        <p>
+            <script>
+                // Plus sign joins two String together.  
+                document.write('This is a text string ' + 'that I have created.  ');
+            </script>
+        </p>
+
+        <br>
+
+        <div id="randomImage">
+            <img src="images/default.bmp">
+        </div>
+
+        <script>
+            images = new Array(4);
+            images[0] = "<img src='images/yellow.bmp'>";
+            images[1] = "<img src='images/brown.bmp'>";
+            images[2] = "<img src='images/purple.bmp'>";
+            images[3] = "<img src='images/green.bmp'>";
+
+            /* Generates a random number from 0 to 3.  */
+            i = Math.floor(Math.random() * images.length);
+            /* Displays a random image.  */
+            randomImage.innerHTML = images[i];
+        </script>
+    </body>
+</html>

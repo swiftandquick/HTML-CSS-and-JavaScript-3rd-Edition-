@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Adding Text to a Page</title>
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1 id="heading1">Create Your Own Content</h1>
+        <p id="paragraph1">Using the W3C DOM, you can dynmically 
+            add sentences to this paragraph.  </p>
+        <form name="changeform">
+            <input name="sentence" size="65">
+            <!-- Click on the "Add!" button will call the addText() function.  -->
+            <button type="button" onclick="addText();">Add!</button>
+        </form>
+        <script>
+            // Click on the "Add!" button will call this function.  
+            function addText() {
+                if (!document.getElementById) {
+                    return;
+                }
+                /* Retrieve the value of sentence (input), which is from changeform (form).  */
+                var sentence = document.changeform.sentence.value;
+                /* Create a text node equal to the space plus value of sentence.  */
+                var node = document.createTextNode(" " + sentence);
+                /* Append node to the end of #paragraph1 (id).  */
+                document.getElementById("paragraph1").appendChild(node);
+                /* Reset the sentence text field to empty.  */
+                document.changeform.sentence.value="";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Math Example</title>
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Math Example</h1>
+        <p>How random are JavaScript's random numbers? <br>
+        Let's genereate 5000 of them and find out.  </p>
+        <script>
+            // Exercise Problem #3
+            for (j = 1; j <= 3; j++) {
+                var total = 0;
+                for (i = 1; i <= 5000; i++) {
+                    /* Generate 5000 random numbers between 0.0 and 1.0.  */
+                    var num = Math.random();
+                    /* Add the next num to find the sum of the 5000 random numbers.  */
+                    total += num;
+                    /* For each 1000 random numbers generated, print out the statement 
+                    that states which iteration the loop currently is at.  */
+                    if (i % 1000 == 0) {
+                        document.write("Generated " + i + " numbers...<br>");
+                    }
+                }
+                /* Divide sum by 5000 to get the average.  */
+                var average = total / 5000;
+                average = Math.round(average * 1000) / 1000;
+                document.write("<h2>Average of 5000 numbers is:  "
+                                + average + "</h2>");
+            }
+        </script>
+    </body>
+</html>
