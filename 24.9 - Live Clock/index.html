@@ -21,7 +21,7 @@
             var minute = 0;
             var second = 0;
 
-            // Call the update function 2 seconds after first load.  
+            // Call the update function 1 second after first load.  
             timeoutID = window.setTimeout(Update, 1000);
 
             function Update() {
@@ -35,7 +35,7 @@
                     hour++;
                 }
                 var textField = document.getElementById("showText");
-                /* The value counter changes once every 2 seconds.  */
+                /* The value counter changes once every 1 second.  */
                 textField.innerHTML = hour + ":" + minute + ":" + second;
                 // Set another timeout for the next count, function calls itself.  
                 timeoutID = window.setTimeout(Update, 1000);
